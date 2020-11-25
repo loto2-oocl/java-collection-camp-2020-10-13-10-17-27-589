@@ -12,9 +12,7 @@ public class Reduce {
 
     public double getAverage() {
         final int arraySize = this.arrayList.size();
-        return this.arrayList.stream()
-            .mapToDouble(i -> i)
-            .reduce(0.0, (average, item) -> average + item / arraySize);
+        return (double)this.arrayList.stream().reduce(0, Integer::sum) / arraySize;
     }
 
     public int getMaxValue() {
