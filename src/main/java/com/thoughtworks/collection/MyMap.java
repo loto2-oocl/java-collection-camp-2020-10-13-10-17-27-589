@@ -17,12 +17,12 @@ public class MyMap {
     }
 
     public List<Integer> getTriple() {
-        return this.array.stream().map(integer -> integer * 3).collect(Collectors.toList());
+        return this.array.stream().map(number -> number * 3).collect(Collectors.toList());
     }
 
     public List<String> mapLetter() {
         return this.array.stream()
-            .map(integer -> this.letterList.get(integer - 1))
+            .map(number -> this.letterList.get(number - 1))
             .collect(Collectors.toList());
     }
 
