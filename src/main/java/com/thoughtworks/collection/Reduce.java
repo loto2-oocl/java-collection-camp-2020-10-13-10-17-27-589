@@ -17,15 +17,14 @@ public class Reduce {
 
     public int getMaxValue() {
         return this.arrayList.stream()
-            .reduce(0, Integer::max);
+            .reduce(Integer::max).orElse(null);
     }
 
     public int getLastOdd() {
         return this.arrayList.stream()
             .reduce(
-                0,
                 (current, next) -> {
                     return next % 2 != 0 ? next : current;
-                });
+                }).orElse(null);
     }
 }
